@@ -800,11 +800,12 @@ strong {
   position: relative;
 }
 
-/* Keep original image styling */
 .carousel-image {
-  display: block;
   width: 100%;
   min-height: 680px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0 !important;
 }
 
 /* Simple text overlay - bottom left, minimal styling */
