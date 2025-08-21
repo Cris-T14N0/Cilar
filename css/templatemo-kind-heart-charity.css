@@ -149,6 +149,10 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.section-bg {
+  background-color: var(--section-bg-color);
+}
+
 /*---------------------------------------
           NAVIGATION
         -----------------------------------------*/
@@ -354,7 +358,8 @@ strong {
   object-fit: cover;
   display: block;
   transition: opacity 0.3s ease-in-out;
-  opacity: 0.6; /* base opacity */
+  opacity: 0.6;
+  /* base opacity */
 }
 
 .thumbnail-preview img.fade {
@@ -417,70 +422,6 @@ strong {
 .carousel-control-next-icon {
   width: 20px;
   height: 20px;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .carousel-with-thumbnails {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .thumbnail-preview {
-    flex: 0 0 80px;
-    height: 60px;
-    width: 80px;
-  }
-
-  .main-carousel {
-    order: -1;
-    max-width: 100%;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .carousel-control-prev {
-    left: 10px;
-  }
-
-  .carousel-control-next {
-    right: 10px;
-  }
-
-  .thumbnail-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 576px) {
-  .gallery-section {
-    padding: 60px 0;
-  }
-
-  .thumbnail-preview {
-    flex: 0 0 60px;
-    height: 45px;
-    width: 60px;
-  }
-}
-
-/* Hide thumbnails on very small screens */
-@media (max-width: 480px) {
-  .thumbnail-preview {
-    display: none;
-  }
-
-  .main-carousel {
-    max-width: 100%;
-  }
 }
 
 /*---------------------------------------
@@ -786,102 +727,9 @@ strong {
 
 /*---------------------------------------
           RESPONSIVE STYLES
-        -----------------------------------------*/
-@media (max-width: 768px) {
-  .hero-section,
-  #hero-slide .carousel-item {
-    height: 500px;
-    min-height: 500px;
-  }
+-----------------------------------------*/
 
-  .hero-image {
-    min-height: 500px;
-  }
-
-  .hero-text-overlay {
-    bottom: 40px;
-    left: 40px;
-  }
-
-  .hero-text-overlay h1 {
-    font-size: 2.8rem;
-  }
-
-  .hero-text-overlay h2 {
-    font-size: 1.1rem;
-  }
-
-  /* ADDED: About section mobile fixes */
-  .about-text-block {
-    padding: 30px 20px;
-    text-align: center;
-  }
-  
-  .about-image {
-    margin: 0 auto 30px auto;
-    width: 90%;
-    max-width: 400px;
-    height: 400px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-text-overlay {
-    bottom: 30px;
-    left: 30px;
-  }
-
-  .hero-text-overlay h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-text-overlay h2 {
-    font-size: 1rem;
-  }
-
-  /* ADDED: About section mobile optimizations */
-  .about-image {
-    width: 85%;
-    max-width: 350px;
-    height: 380px;
-    margin: 0 auto 25px auto;
-  }
-  
-  .about-text-block {
-    padding: 20px 15px;
-    text-align: center;
-  }
-  
-  .about-text-block h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .about-text-block p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  
-  .about-text-block .text-muted {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .social-icon {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-  
-  .social-icon-link {
-    width: 40px;
-    height: 40px;
-    line-height: 42px;
-    margin: 0 8px;
-    font-size: 1.1rem;
-  }
-}
-
+/* Extra Large / Desktop */
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 42px;
@@ -929,10 +777,7 @@ strong {
     padding: 8px 20px;
   }
 
-  .hero-section {
-    height: inherit;
-  }
-
+  .hero-section,
   #hero-slide .carousel-item {
     height: inherit;
   }
@@ -954,8 +799,11 @@ strong {
   }
 
   .about-image {
-    width: inherit;
-    height: 450px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto 30px auto;
+    display: block;
   }
 
   .about-text-block {
@@ -975,7 +823,160 @@ strong {
   }
 }
 
+/* Medium devices (tablet) */
+@media (max-width: 768px) {
+
+  .hero-section,
+  #hero-slide .carousel-item {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .hero-image {
+    min-height: 500px;
+  }
+
+  .hero-text-overlay {
+    bottom: 40px;
+    left: 40px;
+  }
+
+  .hero-text-overlay h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-text-overlay h2 {
+    font-size: 1.1rem;
+  }
+
+  .about-text-block {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto 30px auto;
+  }
+
+  .carousel-with-thumbnails {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .thumbnail-preview {
+    flex: 0 0 80px;
+    width: 80px;
+    height: 60px;
+  }
+
+  .main-carousel {
+    order: -1;
+    max-width: 100%;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
+  .thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Small devices (mobile) */
+@media (max-width: 576px) {
+  .gallery-section {
+    padding: 60px 0;
+  }
+
+  .thumbnail-preview {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 45px;
+  }
+
+  .about-image {
+    width: 85%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto 25px auto;
+  }
+
+  .hero-text-overlay {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  .hero-text-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text-overlay h2 {
+    font-size: 1rem;
+  }
+
+  .about-text-block {
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .about-text-block h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-text-block p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .about-text-block .text-muted {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-icon {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .social-icon-link {
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    margin: 0 8px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra small devices (phones) */
 @media screen and (max-width: 480px) {
+  .thumbnail-preview {
+    display: none;
+  }
+
+  .main-carousel {
+    max-width: 100%;
+  }
+
   h1 {
     font-size: 40px;
   }
@@ -994,26 +995,5 @@ strong {
 
   h5 {
     font-size: 20px;
-  }
-}
-
-/* ADDED: New breakpoint for very small phones like Redmi 14C */
-@media screen and (max-width: 400px) {
-  .about-image {
-    width: 80%;
-    max-width: 300px;
-    height: 350px;
-  }
-  
-  .about-text-block {
-    padding: 15px 10px;
-  }
-  
-  .about-text-block h2 {
-    font-size: 1.6rem;
-  }
-  
-  .about-text-block p {
-    font-size: 0.9rem;
   }
 }
