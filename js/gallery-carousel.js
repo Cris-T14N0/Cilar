@@ -21,12 +21,25 @@ images.forEach(src => {
 
 let currentIndex = 0;
 
+function fadeSwap(imgElement, newSrc) {
+    if (!imgElement) return;
+
+    // Dim slightly (e.g., from 0.6 → 0.3)
+    imgElement.style.opacity = 0.3;
+
+    setTimeout(() => {
+        imgElement.src = newSrc;
+        // Fade back to normal
+        imgElement.style.opacity = 0.6;
+    }, 200); // shorter timeout for subtle effect
+}
+
 function updateThumbnails() {
     const prevIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
 
-    if (prevThumbnail) prevThumbnail.src = images[prevIndex];
-    if (nextThumbnail) nextThumbnail.src = images[nextIndex];
+    fadeSwap(prevThumbnail, images[prevIndex]);
+    fadeSwap(nextThumbnail, images[nextIndex]);
 }
 
 if (carousel) {
