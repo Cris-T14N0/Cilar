@@ -785,17 +785,9 @@ strong {
 }
 
 /*---------------------------------------
-          UTILITY CLASSES
-        -----------------------------------------*/
-.section-bg {
-  background-color: var(--section-bg-color);
-}
-
-/*---------------------------------------
           RESPONSIVE STYLES
-        -----------------------------------------*/
+-----------------------------------------*/
 @media (max-width: 768px) {
-
   .hero-section,
   #hero-slide .carousel-item {
     height: 500px;
@@ -818,6 +810,18 @@ strong {
   .hero-text-overlay h2 {
     font-size: 1.1rem;
   }
+
+  /* ADDED: About section mobile fixes */
+  .about-text-block {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .about-image {
+    margin: 0 auto 30px auto;
+    max-width: 300px;
+    height: 350px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -832,6 +836,47 @@ strong {
 
   .hero-text-overlay h2 {
     font-size: 1rem;
+  }
+
+  /* ADDED: About section mobile optimizations */
+  .about-image {
+    max-width: 280px;
+    height: 320px;
+    margin: 0 auto 25px auto;
+  }
+  
+  .about-text-block {
+    padding: 20px 15px;
+    text-align: center;
+  }
+  
+  .about-text-block h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text-block p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text-block .text-muted {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-icon {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .social-icon-link {
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    margin: 0 8px;
+    font-size: 1.1rem;
   }
 }
 
@@ -947,5 +992,25 @@ strong {
 
   h5 {
     font-size: 20px;
+  }
+}
+
+/* ADDED: New breakpoint for very small phones like Redmi 14C */
+@media screen and (max-width: 400px) {
+  .about-image {
+    max-width: 250px;
+    height: 280px;
+  }
+  
+  .about-text-block {
+    padding: 15px 10px;
+  }
+  
+  .about-text-block h2 {
+    font-size: 1.6rem;
+  }
+  
+  .about-text-block p {
+    font-size: 0.9rem;
   }
 }
