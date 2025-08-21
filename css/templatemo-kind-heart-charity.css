@@ -786,7 +786,7 @@ strong {
 
 /*---------------------------------------
           RESPONSIVE STYLES
------------------------------------------*/
+        -----------------------------------------*/
 @media (max-width: 768px) {
   .hero-section,
   #hero-slide .carousel-item {
@@ -819,8 +819,9 @@ strong {
   
   .about-image {
     margin: 0 auto 30px auto;
-    max-width: 300px;
-    height: 350px;
+    width: 90%;
+    max-width: 400px;
+    height: 400px;
   }
 }
 
@@ -840,8 +841,9 @@ strong {
 
   /* ADDED: About section mobile optimizations */
   .about-image {
-    max-width: 280px;
-    height: 320px;
+    width: 85%;
+    max-width: 350px;
+    height: 380px;
     margin: 0 auto 25px auto;
   }
   
@@ -998,8 +1000,9 @@ strong {
 /* ADDED: New breakpoint for very small phones like Redmi 14C */
 @media screen and (max-width: 400px) {
   .about-image {
-    max-width: 250px;
-    height: 280px;
+    width: 80%;
+    max-width: 300px;
+    height: 350px;
   }
   
   .about-text-block {
