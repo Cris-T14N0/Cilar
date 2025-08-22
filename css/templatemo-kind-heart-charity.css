@@ -967,33 +967,20 @@ strong {
   }
 }
 
-/* Extra small devices (phones) */
 @media screen and (max-width: 480px) {
-  .thumbnail-preview {
-    display: none;
-  }
+  .thumbnail-preview { display: none; }
+  .main-carousel { max-width: 100%; }
 
-  .main-carousel {
-    max-width: 100%;
-  }
+  h1 { font-size: 40px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 26px; }
+  h4 { font-size: 22px; }
+  h5 { font-size: 20px; }
 
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 26px;
-  }
-
-  h4 {
-    font-size: 22px;
-  }
-
-  h5 {
-    font-size: 20px;
+  .about-image {
+    width: 70%;       /* smaller than before */
+    max-width: 250px; /* reduce max width */
+    height: auto;
+    margin: 0 auto 20px auto;
   }
 }
