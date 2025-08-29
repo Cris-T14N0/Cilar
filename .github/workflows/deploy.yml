@@ -3,7 +3,7 @@ name: 🚀 Deploy to OVH via FTP
 on:
   push:
     branches:
-      - main   # troca se usares outro branch (ex: master)
+      - Main   # troca se usares outro branch (ex: master)
 
 jobs:
   deploy:
