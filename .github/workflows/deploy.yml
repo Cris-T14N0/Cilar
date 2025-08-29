@@ -19,7 +19,7 @@ steps:
       password:
         from_secret: FTP_PASSWORD
       port: 22
-      target: "C:/www"           # Windows destination folder
+      target: "/www"
       source: "./*"               # copy all files individually
       rm: true                    # remove existing files before upload
       exclude:
