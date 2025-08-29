@@ -20,7 +20,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}  # e.g., ftp.cluster100.hosting.ovh.net
           username: ${{ secrets.FTP_USERNAME }}  # e.g., lojacip
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
           protocol: sftp
           local-dir: ./  # root folder of your repo containing HTML/CSS
           server-dir: /www
