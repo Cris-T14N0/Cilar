@@ -1,26 +1,10 @@
-name: Deploy to OVH via SFTP
-
-on:
-  push:
-    branches:
-      - Main  # your main branch
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Upload via SFTP
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.FTP_SERVER }}       # your OVH host
-          username: ${{ secrets.FTP_USERNAME }} # your OVH SFTP user
-          password: ${{ secrets.FTP_PASSWORD }} # your SFTP password
-          port: 22
-          source: "./*"                          # all files in repo root
-          target: "/home/lojacip/www"           # OVH public folder
-          rm: true                               # remove old files
-          overwrite: true                        # overwrite existing files
+- name: Deploy via SFTP
+  uses: appleboy/ssh-action@v0.1.7
+  with:
+    host: ${{ secrets.FTP_SERVER }}
+    username: ${{ secrets.FTP_USERNAME }}
+    password: ${{ secrets.FTP_PASSWORD }}
+    port: 22
+    script: |
+      rm -rf /home/lojacip/www/*
+      scp -r * ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_SERVER }}:/home/lojacip/www
