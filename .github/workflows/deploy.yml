@@ -1,33 +1,31 @@
-name: Deploy to OVH via SFTP
+kind: pipeline
+type: docker
+name: deploy
 
-on:
-  push:
-    branches:
-      - Main  # Default branch
+steps:
+  - name: Checkout code
+    image: alpine/git
+    commands:
+      - git clone https://github.com/your-username/your-repo.git .
+      - git checkout Main
 
-jobs:
-  deploy:
-    name: Deploy to OVH via SFTP
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 📂 Checkout repo
-        uses: actions/checkout@v4
-
-      - name: 📤 Deploy via SFTP
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.FTP_SERVER }}      # e.g., ftp.cluster100.hosting.ovh.net
-          username: ${{ secrets.FTP_USERNAME }} # e.g., lojacip
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          source: "./"                          # Root folder of your repo
-          target: "/www"
-          rm: true                              # Remove existing files in target folder
-          exclude: |
-            .git/**
-            .github/**
-            .gitignore
-            README.md
-            .env
-            .DS_Store
+  - name: Deploy via SCP/SFTP
+    image: appleboy/drone-scp
+    settings:
+      host:
+        from_secret: FTP_SERVER   # e.g., your OVH host
+      username:
+        from_secret: FTP_USERNAME
+      password:
+        from_secret: FTP_PASSWORD
+      port: 22
+      target: "C:/www"           # Windows destination folder
+      source: "./*"               # copy all files individually
+      rm: true                    # remove existing files before upload
+      exclude:
+        - ".git/**"
+        - ".github/**"
+        - ".gitignore"
+        - "README.md"
+        - ".env"
+        - ".DS_Store"
