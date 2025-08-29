@@ -19,7 +19,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
+          port: 21
           local-dir: ./   # diretório local com os ficheiros (raiz do repo)
-          server-dir: www/  # diretório remoto no OVH
-          protocol: sftp  # muda para sftp se usares porta 22
+          server-dir: /home/lojacip/www/ # diretório remoto no OVH
+          protocol: ftp  # muda para sftp se usares porta 22
