@@ -1,27 +1,25 @@
-name: Deploy to OVH via SFTP
+kind: pipeline
+type: docker
+name: deploy
 
-on:
-  push:
-    branches:
-      - Main  # your default branch
+steps:
+  - name: Checkout code
+    image: alpine/git
+    commands:
+      - git clone https://github.com/your-username/your-repo.git .
+      - git checkout Main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Deploy via SFTP
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.FTP_SERVER }}       # your OVH server host
-          username: ${{ secrets.FTP_USERNAME }} # lojacip
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          source: "./"                          # your repo root (HTML/CSS)
-          target: "/home/lojacip/www"           # OVH public folder
-          rm: true                               # remove old files before upload
-          overwrite: true                        # overwrite files if they exist
-          strip_components: 0                    # keep folder structure
+  - name: Deploy via SFTP
+    image: appleboy/drone-scp
+    settings:
+      host:
+        from_secret: FTP_SERVER
+      username:
+        from_secret: FTP_USERNAME
+      password:
+        from_secret: FTP_PASSWORD
+      port: 22
+      source: "./*"              # copy all files individually
+      target: "/home/lojacip/www" # OVH Linux public folder
+      rm: true                   # remove old files before upload
+      overwrite: true            # overwrite existing files
