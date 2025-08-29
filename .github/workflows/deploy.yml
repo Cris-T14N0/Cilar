@@ -1,26 +1,36 @@
 name: Deploy to OVH via FTP
+
 on:
   push:
     branches:
-      - Main # ou branch principal do repo
- #test
+      - Main  # Default branch
+
 jobs:
   deploy:
+    name: Deploy to OVH SFTP
     runs-on: ubuntu-latest
 
     steps:
       - name: 📂 Checkout repo
         uses: actions/checkout@v4
 
+      # Optional: install dependencies if needed
+      - name: Install dependencies
+        run: npm install
+
+      # Optional: build project if needed (e.g., React, Vue, Angular)
+      - name: Build project
+        run: npm run build
+
       - name: 📤 Deploy to OVH via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }} # ftp.cluster100.hosting.ovh.net
-          username: ${{ secrets.FTP_USERNAME }} # lojacip
+          server: ${{ secrets.FTP_SERVER }}  # e.g., ftp.cluster100.hosting.ovh.net
+          username: ${{ secrets.FTP_USERNAME }}  # e.g., lojacip
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
+          port: ${{ secrets.PORT }}
           protocol: sftp
-          local-dir: ./ # ou ./dist ou ./build dependendo do projeto
+          local-dir: ./  # Adjust to ./ or ./dist depending on your project
           server-dir: /www
           exclude: |
             **/.git/**
