@@ -1,9 +1,8 @@
-name: 🚀 Deploy to OVH via FTP
-
+name: Deploy to OVH via FTP
 on:
   push:
     branches:
-      - Main   # troca se usares outro branch (ex: master)
+      - main # ou branch principal do repo
 
 jobs:
   deploy:
@@ -13,13 +12,20 @@ jobs:
       - name: 📂 Checkout repo
         uses: actions/checkout@v4
 
-      - name: 📤 Deploy to OVH via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: 📤 Deploy to OVH via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }} # ftp.cluster100.hosting.ovh.net
+          username: ${{ secrets.FTP_USERNAME }} # lojacip
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          local-dir: ./   # diretório local com os ficheiros (raiz do repo)
-          server-dir: /home/lojacip/www/ # diretório remoto no OVH
-          protocol: ftp  # muda para sftp se usares porta 22
+          port: 22
+          protocol: sftp
+          local-dir: ./ # ou ./dist ou ./build dependendo do projeto
+          server-dir: /home/lojacip/www
+          exclude: |
+            **/.git/**
+            **/node_modules/**
+            **/.gitignore
+            **/.github/**
+            **/README.md
+            **/.env
