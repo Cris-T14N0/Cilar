@@ -14,28 +14,19 @@ jobs:
       - name: 📂 Checkout repo
         uses: actions/checkout@v4
 
-      # Optional: install dependencies if needed
-      - name: Install dependencies
-        run: npm install
-
-      # Optional: build project if needed (e.g., React, Vue, Angular)
-      - name: Build project
-        run: npm run build
-
       - name: 📤 Deploy to OVH via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}  # e.g., ftp.cluster100.hosting.ovh.net
           username: ${{ secrets.FTP_USERNAME }}  # e.g., lojacip
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.PORT }}
+          port: ${{ secrets.FTP_PASSWORD }}
           protocol: sftp
-          local-dir: ./  # Adjust to ./ or ./dist depending on your project
+          local-dir: ./  # root folder of your repo containing HTML/CSS
           server-dir: /www
           exclude: |
             **/.git/**
-            **/node_modules/**
-            **/.gitignore
             **/.github/**
+            **/.gitignore
             **/README.md
             **/.env
