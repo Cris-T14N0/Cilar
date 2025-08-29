@@ -1,4 +1,4 @@
-name: Deploy to OVH via FTP
+name: Deploy to OVH via SFTP
 
 on:
   push:
@@ -7,26 +7,27 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to OVH SFTP
+    name: Deploy to OVH via SFTP
     runs-on: ubuntu-latest
 
     steps:
       - name: 📂 Checkout repo
         uses: actions/checkout@v4
 
-      - name: 📤 Deploy to OVH via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: 📤 Deploy via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}  # e.g., ftp.cluster100.hosting.ovh.net
-          username: ${{ secrets.FTP_USERNAME }}  # e.g., lojacip
+          host: ${{ secrets.FTP_SERVER }}      # e.g., ftp.cluster100.hosting.ovh.net
+          username: ${{ secrets.FTP_USERNAME }} # e.g., lojacip
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: sftp
-          local-dir: ./  # root folder of your repo containing HTML/CSS
-          server-dir: /www
+          port: 22
+          source: "./"                          # Root folder of your repo
+          target: "/www"
+          rm: true                              # Remove existing files in target folder
           exclude: |
-            **/.git/**
-            **/.github/**
-            **/.gitignore
-            **/README.md
-            **/.env
+            .git/**
+            .github/**
+            .gitignore
+            README.md
+            .env
+            .DS_Store
