@@ -1,0 +1,25 @@
+name: 🚀 Deploy to OVH via FTP
+
+on:
+  push:
+    branches:
+      - main   # troca se usares outro branch (ex: master)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📂 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 📤 Deploy to OVH via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ./   # diretório local com os ficheiros (raiz do repo)
+          server-dir: www/  # diretório remoto no OVH
+          protocol: sftp  # muda para sftp se usares porta 22
