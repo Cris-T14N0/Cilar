@@ -1,608 +1,878 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-PT">
+  <head>
+    <link rel="icon" href="/images/logo_tab.ico" type="image/x-icon" />
 
-<head>
-    <link rel="icon" href="/images/logo_tab.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="Cilar: Loja em Foros de Salvaterra, Portugal, com roupa, produtos de limpeza, artigos para casa, carvão, gás e mais.">
-    <meta name="author" content="Cristiano Oliveria">
+    <meta
+      name="description"
+      content="Cilar: Loja em Foros de Salvaterra, Portugal, com roupa, produtos de limpeza, artigos para casa, carvão, gás e mais."
+    />
+    <meta name="author" content="Cristiano Oliveria" />
 
     <title>Cilar</title>
 
     <!-- CSS FILES -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
 
-    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <!-- Java Script Email CDN -->
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "lFjMuaEDyRmNTtGX7",
+        });
+      })();
+    </script>
+  </head>
 
-</head>
-
-<body id="section_1">
-
+  <body id="section_1">
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo_cilar.png" class="logo" alt="Kind Heart Charity">
-            </a>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="images/logo_cilar.png"
+            class="logo"
+            alt="Kind Heart Charity"
+          />
+        </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#Top">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#">Serviços CTT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#">História</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#">Localização</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#">Contactos</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="#Top">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="#">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="#">Serviços CTT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="#">História</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="#">Localização</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="#">Contactos</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <main>
-        <!-- HERO SECTION -->
-        <section class="hero-section">
-            <div class="container-fluid">
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 p-0">
+              <div id="hero-slide" class="carousel carousel-fade slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/loja/hero_bg.jpg"
+                      class="hero-image"
+                      alt="Cilar home goods"
+                    />
+                    <div class="hero-text-overlay">
+                      <h1>Cilar</h1>
+                      <h2>Artigos para o seu lar</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="cta-section section-bg">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-12 text-center">
+              <h2 class="mb-0">Conveniência local & Serviços CTT.</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PRODUCTS SECTION -->
+      <section class="featured-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+              <div
+                class="featured-block d-flex justify-content-center align-items-center"
+              >
+                <div class="d-block">
+                  <img
+                    src="images/icons/utilitarios_icon.png"
+                    class="featured-block-image img-fluid"
+                    alt="Utilidades"
+                  />
+                  <p class="featured-block-text">
+                    <strong>Utilidades</strong> do Dia a Dia
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+              <div
+                class="featured-block d-flex justify-content-center align-items-center"
+              >
+                <div class="d-block">
+                  <img
+                    src="images/icons/limpeza_icon.png"
+                    class="featured-block-image img-fluid"
+                    alt="Casa e Limpeza"
+                  />
+                  <p class="featured-block-text">
+                    <strong>Produtos</strong> para casa & Limpeza
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+              <div
+                class="featured-block d-flex justify-content-center align-items-center"
+              >
+                <div class="d-block">
+                  <img
+                    src="images/icons/roupas_icon.png"
+                    class="featured-block-image img-fluid"
+                    alt="Roupas e acessórios"
+                  />
+                  <p class="featured-block-text">
+                    <strong>Roupas</strong> & Acessórios
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+              <div
+                class="featured-block d-flex justify-content-center align-items-center"
+              >
+                <div class="d-block">
+                  <img
+                    src="images/icons/tecnologia_icon.png"
+                    class="featured-block-image img-fluid"
+                    alt="Telemóveis e tecnologia"
+                  />
+                  <p class="featured-block-text">
+                    <strong>Telemóveis</strong> & Tecnologia
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY SECTION -->
+      <section class="gallery-section" id="section_2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2 class="mb-4">Conheça a nossa loja</h2>
+              <p class="mb-5">
+                Conheça melhor o nosso espaço e os nossos produtos através
+                destas imagens.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-with-thumbnails">
+            <!-- Left thumbnail preview -->
+            <div class="thumbnail-preview d-none d-md-block" id="prevThumbnail">
+              <img
+                src="images/loja/cobertores.jpg"
+                alt="Previous slide"
+                data-bs-target="#lojaCarousel"
+                data-bs-slide="prev"
+              />
+            </div>
+
+            <!-- Main carousel -->
+            <div class="main-carousel">
+              <div
+                id="lojaCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active text-center">
+                    <img
+                      src="images/loja/exterior.jpg"
+                      class="carousel-img"
+                      alt="Exterior da loja Cilar"
+                    />
+                  </div>
+                  <div class="carousel-item text-center">
+                    <img
+                      src="images/loja/quiosque.jpg"
+                      class="carousel-img"
+                      alt="Quiosque da loja"
+                    />
+                  </div>
+                  <div class="carousel-item text-center">
+                    <img
+                      src="images/loja/produtos_casa.jpg"
+                      class="carousel-img"
+                      alt="Produtos para casa"
+                    />
+                  </div>
+                  <div class="carousel-item text-center">
+                    <img
+                      src="images/loja/roupa.jpg"
+                      class="carousel-img"
+                      alt="Secção de roupa"
+                    />
+                  </div>
+                  <div class="carousel-item text-center">
+                    <img
+                      src="images/loja/tecnologia.jpg"
+                      class="carousel-img"
+                      alt="Produtos de tecnologia"
+                    />
+                  </div>
+                  <div class="carousel-item text-center">
+                    <img
+                      src="images/loja/flores_falsas.jpg"
+                      class="carousel-img"
+                      alt="Flores artificiais"
+                    />
+                  </div>
+                  <div class="carousel-item text-center">
+                    <img
+                      src="images/loja/linhas.jpg"
+                      class="carousel-img"
+                      alt="Linhas e fios"
+                    />
+                  </div>
+                  <div class="carousel-item text-center">
+                    <img
+                      src="images/loja/cobertores.jpg"
+                      class="carousel-img"
+                      alt="Cobertores e têxteis"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#lojaCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#lojaCarousel"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                  <span class="visually-hidden">Próximo</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right thumbnail preview -->
+            <div class="thumbnail-preview d-none d-md-block" id="nextThumbnail">
+              <img
+                src="images/loja/quiosque.jpg"
+                alt="Next slide"
+                data-bs-target="#lojaCarousel"
+                data-bs-slide="next"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTT SERVICES SECTION -->
+      <section class="ctt-services-section" id="section_3">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2>Serviços CTT</h2>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <div class="row d-flex align-items-stretch mb-4">
+            <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+              <div class="ctt-container">
+                <h3 class="mb-4 text-center" style="color: #d32f2f">
+                  Somos um Ponto CTT.
+                </h3>
+                <div class="carousel-inner">
+                  <img
+                    src="images/loja/ponto_ctt.jpg"
+                    class="d-block w-100"
+                    alt="Interior Ponto CTT"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-12 d-flex">
+              <div class="ctt-description-container">
+                <h3 class="text-white mb-4">
+                  <i class="bi bi-info-circle-fill me-2"></i>
+                  O que é um Ponto CTT?
+                </h3>
+
+                <p class="text-white mb-4">
+                  Um <strong>Ponto CTT</strong> é um estabelecimento comercial
+                  parceiro dos CTT que oferece uma ampla gama de serviços
+                  postais e financeiros. Funciona como uma extensão da rede de
+                  correios, proporcionando maior proximidade e conveniência aos
+                  clientes.
+                </p>
+
+                <p class="text-white mb-4">
+                  Estes pontos estratégicos permitem aceder aos principais
+                  serviços dos CTT sem necessidade de se deslocar a um posto de
+                  correios tradicional, oferecendo
+                  <strong>horários mais flexíveis</strong> e
+                  <strong>localização mais conveniente</strong>.
+                </p>
+
+                <div class="ctt-advantages-box">
+                  <h5 class="text-white mb-3">
+                    <i class="bi bi-star-fill me-2"></i>
+                    Principais Vantagens:
+                  </h5>
+                  <p class="text-white mb-2">
+                    • <strong>Horários alargados</strong> - Mais flexibilidade
+                  </p>
+                  <p class="text-white mb-2">
+                    • <strong>Proximidade residencial</strong> - Mais perto de
+                    si
+                  </p>
+                  <p class="text-white mb-2">
+                    • <strong>Atendimento personalizado</strong> - Serviço
+                    dedicado
+                  </p>
+                  <p class="text-white mb-0">
+                    • <strong>Serviços completos</strong> - Tudo num só local
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="ctt-services-box">
+                <h3 class="text-white mb-4 text-center">
+                  <i class="bi bi-list-check me-2"></i>
+                  Serviços Disponíveis no Ponto CTT
+                </h3>
+
                 <div class="row">
-                    <div class="col-12 p-0">
-                        <div id="hero-slide" class="carousel carousel-fade slide">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/loja/hero_bg.jpg" class="hero-image" alt="Cilar home goods">
-                                    <div class="hero-text-overlay">
-                                        <h1>Cilar</h1>
-                                        <h2>Artigos para o seu lar</h2>
-                                    </div>
-                                </div>
-                            </div>
+                  <div class="col-lg-6 col-12">
+                    <ul class="ctt-service-list">
+                      <li>
+                        <i class="bi bi-envelope-fill ctt-service-icon"></i>
+                        <div class="ctt-service-content">
+                          <strong class="text-white"
+                            >Correio Nacional e Internacional</strong
+                          ><br />
+                          <small class="text-white"
+                            >Envio de cartas, postais e documentos registados
+                            para todo o mundo</small
+                          >
                         </div>
-                    </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-box-seam ctt-service-icon"></i>
+                        <div class="ctt-service-content">
+                          <strong class="text-white"
+                            >Encomendas CTT Expresso</strong
+                          ><br />
+                          <small class="text-white"
+                            >Envio e receção de encomendas com rastreamento em
+                            tempo real</small
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-credit-card ctt-service-icon"></i>
+                        <div class="ctt-service-content">
+                          <strong class="text-white">Vales Postais</strong
+                          ><br />
+                          <small class="text-white"
+                            >Envio e levantamento de dinheiro de forma segura e
+                            rápida</small
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <ul class="ctt-service-list">
+                      <li>
+                        <i class="bi bi-file-text ctt-service-icon"></i>
+                        <div class="ctt-service-content">
+                          <strong class="text-white"
+                            >Impressões e Fotocópias</strong
+                          ><br />
+                          <small class="text-white"
+                            >Serviços completos de impressão, digitalização e
+                            fotocópia</small
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-phone ctt-service-icon"></i>
+                        <div class="ctt-service-content">
+                          <strong class="text-white">Recarregamentos</strong
+                          ><br />
+                          <small class="text-white"
+                            >Carregamentos de telemóvel e cartões pré-pagos de
+                            todas as operadoras</small
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-receipt ctt-service-icon"></i>
+                        <div class="ctt-service-content">
+                          <strong class="text-white"
+                            >Pagamentos de Serviços</strong
+                          ><br />
+                          <small class="text-white"
+                            >Pagamento de faturas, multas e diversos serviços
+                            públicos</small
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- CTA SECTION -->
-        <section class="cta-section section-bg">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-12 text-center">
-                        <h2 class="mb-0">Conveniência local & Serviços CTT.</h2>
-                    </div>
+      <!-- HISTORY SECTION -->
+      <section class="history-section" id="section_4">
+        <div class="container">
+          <div class="col-12 text-center mb-5">
+            <h1>Conheça-nos!</h1>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+              <img
+                src="images/loja/hist.jpg"
+                class="history-image img-fluid"
+                alt=""
+              />
+            </div>
+
+            <div class="col-lg-6 col-12">
+              <div class="history-text-box">
+                <h2 class="mb-2">A nossa história</h2>
+                <h5 class="mb-3">Cilar, artigos para o lar.</h5>
+                <p class="mb-0">
+                  Há duas décadas, no tranquilo cenário dos Foros de Salvaterra,
+                  nasceu este estabelecimento que rapidamente se tornou parte da
+                  vida da comunidade. Ao longo dos anos, cresceu e adaptou-se,
+                  sempre com a mesma dedicação em servir os clientes. Aqui
+                  encontra-se de tudo um pouco desde produtos do dia a dia até
+                  pequenos tesouros que contam histórias. Mais do que uma
+                  simples loja, é um ponto de encontro, um lugar onde gerações
+                  se cruzam, memórias se criam e a tradição se mantém viva.
+                </p>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="history-text-box mb-lg-0">
+                    <h5 class="mb-3">Os Nossos Objetivos</h5>
+                    <p>
+                      Comprometemo-nos a servir com qualidade, proximidade e
+                      respeito pela tradição dos Foros de Salvaterra.
+                    </p>
+
+                    <ul class="history-list mt-2">
+                      <li class="history-list-item d-flex">
+                        <i class="bi-check history-text-box-icon me-2"></i>
+                        Continuar a servir a comunidade
+                      </li>
+                      <li class="history-list-item d-flex">
+                        <i class="bi-check history-text-box-icon me-2"></i>
+                        Oferecer produtos para as necessidades do dia a dia
+                      </li>
+                      <li class="history-list-item d-flex">
+                        <i class="bi-check history-text-box-icon me-2"></i>
+                        Manter o espírito acolhedor e familiar da loja
+                      </li>
+                      <li class="history-list-item d-flex">
+                        <i class="bi-check history-text-box-icon me-2"></i>
+                        Preservar e valorizar a tradição local
+                      </li>
+                      <li class="history-list-item d-flex">
+                        <i class="bi-check history-text-box-icon me-2"></i>
+                        Adaptar-se às mudanças sem perder a essência
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- FEATURED PRODUCTS SECTION -->
-        <section class="featured-section">
-            <div class="container">
+      <!-- ABOUT SECTION (CILA CUNHA) -->
+      <section class="about-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-5 col-12">
+              <img
+                src="images/loja/cila_retrato.jpg"
+                class="about-image ms-lg-auto bg-light shadow-lg img-fluid"
+                alt=""
+              />
+            </div>
+
+            <div class="col-lg-5 col-md-7 col-12">
+              <div class="about-text-block">
+                <h2 class="mb-0">Cila Cunha</h2>
+                <p class="text-muted mb-lg-4 mb-md-4">Dona da loja</p>
+                <p>
+                  Há vinte anos, decidi abrir as portas da minha loja, a Cilar,
+                  aqui nos Foros de Salvaterra. Nunca imaginei, nesse dia, o
+                  quanto este espaço viria a fazer parte não só da minha vida,
+                  mas também da vida da comunidade. Desde cedo, percebi que não
+                  era apenas uma questão de vender produtos. Era criar um lugar
+                  de proximidade, onde cada cliente fosse recebido com um
+                  sorriso e levado a sentir-se em casa.
+                </p>
+
+                <ul class="social-icon mt-4">
+                  <li class="social-icon-item">
+                    <a
+                      href="https://www.facebook.com/cilar.cunha?locale=pt_PT"
+                      target="_blank"
+                      class="social-icon-link bi-facebook"
+                    ></a>
+                  </li>
+                  <li class="social-icon-item">
+                    <a
+                      href="https://www.instagram.com/cila.cunha"
+                      target="_blank"
+                      class="social-icon-link bi-instagram"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATION SECTION (MAP) -->
+      <section class="location-section" id="section_5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="mb-4">Venha visitar-nos!</h2>
+              <p>
+                Rua Imaculado Coração de Maria 137, 2120-188 Foros de Salvaterra
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-10 col-12 mx-auto">
+              <div class="map-container">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12403.391100533932!2d-8.757042016235065!3d38.99597042365279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18e3c6e6cc752d%3A0xbdbced41a6ad3220!2sCilar%20artigos%20para%20o%20lar!5e0!3m2!1spt-PT!2spt!4v1755355026837!5m2!1spt-PT!2spt"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização da Cilar"
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact-section" id="section_6">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+              <div class="contact-info-wrap">
+                <h2 class="mb-5">Entre em contacto</h2>
+
+                <div class="contact-info">
+                  <h5 class="mb-3">Contactos:</h5>
+
+                  <p class="d-flex mb-2">
+                    <i class="bi-geo-alt me-2"></i>
+                    <a
+                      target="_blank"
+                      href="https://maps.app.goo.gl/1EAnzohpn1eWh5AN9"
+                    >
+                      Rua Imaculado Coração de Maria 137, 2120-188 Foros de
+                      Salvaterra
+                    </a>
+                  </p>
+
+                  <p class="d-flex mb-2">
+                    <i class="bi-telephone me-2"></i>
+                    <a href="tel: +351 919 017 931"> +351 919 017 931 </a>
+                  </p>
+
+                  <p class="d-flex">
+                    <i class="bi-envelope me-2"></i>
+                    <a href="mailto:lojacilar@hotmail.com">
+                      lojacilar@hotmail.com
+                    </a>
+                  </p>
+
+                  <p class="d-flex">
+                    <i class="bi-instagram me-2"></i>
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/loja_cilar_/"
+                    >
+                      loja_cilar_
+                    </a>
+                  </p>
+
+                  <a
+                    href="https://www.google.com/maps/dir//Cilar+artigos+para+o+lar+Rua+Imaculado+Cora%C3%A7%C3%A3o+de+Maria+137+2120-188+Foros+de+Salvaterra/@38.9959552,-8.738588,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd18e3c6e6cc752d:0xbdbced41a6ad3220!2m2!1d-8.738588!2d38.9959552?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    class="custom-btn btn mt-3"
+                    >Obter direções</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-12 mx-auto">
+              <form class="custom-form contact-form" method="POST" role="form">
+                <h3>Formulário de Contato</h3>
+
+                <p class="mb-4">
+                  Ou apenas envie um email para:
+                  <strong><a href="#">lojacilar@hotmail.com</a></strong>
+                </p>
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <div class="d-block">
-                                <img src="images/icons/utilitarios_icon.png" class="featured-block-image img-fluid"
-                                    alt="Utilidades">
-                                <p class="featured-block-text"><strong>Utilidades</strong> do Dia a Dia</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <div class="d-block">
-                                <img src="images/icons/limpeza_icon.png" class="featured-block-image img-fluid"
-                                    alt="Casa e Limpeza">
-                                <p class="featured-block-text"><strong>Produtos</strong> para casa & Limpeza</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <div class="d-block">
-                                <img src="images/icons/roupas_icon.png" class="featured-block-image img-fluid"
-                                    alt="Roupas e acessórios">
-                                <p class="featured-block-text"><strong>Roupas</strong> & Acessórios</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <div class="d-block">
-                                <img src="images/icons/tecnologia_icon.png" class="featured-block-image img-fluid"
-                                    alt="Telemóveis e tecnologia">
-                                <p class="featured-block-text"><strong>Telemóveis</strong> & Tecnologia</p>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      class="form-control"
+                      placeholder="Primeiro Nome"
+                      required
+                    />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <input
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      class="form-control"
+                      placeholder="Último Nome"
+                      required
+                    />
+                  </div>
                 </div>
+
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="O seu email"
+                  required
+                />
+
+                <textarea
+                  name="message"
+                  rows="5"
+                  class="form-control"
+                  id="message"
+                  placeholder="Como podemos ajudar?"
+                ></textarea>
+
+                <button type="submit" class="form-control">
+                  Enviar Mensagem
+                </button>
+              </form>
+
+              <script>
+                function sendMail(event) {
+                  console.log("sendMail function called");
+
+                  // Prevent the form from submitting and reloading the page
+                  event.preventDefault();
+
+                  // Get form values
+                  let firstName = document.getElementById("first-name").value;
+                  let lastName = document.getElementById("last-name").value;
+                  let email = document.getElementById("email").value;
+                  let message = document.getElementById("message").value;
+
+                  console.log("Form values:", {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    message: message,
+                  });
+
+                  // Prepare parameters for EmailJS
+                  let parms = {
+                    name: firstName + " " + lastName,
+                    email: email,
+                    message: message,
+                  };
+
+                  console.log("EmailJS parameters:", parms);
+
+                  // Send email via EmailJS
+                  emailjs
+                    .send("service_q3a5z3w", "template_joyr3nf", parms)
+                    .then((response) => {
+                      console.log("EmailJS success:", response);
+                      alert("Email enviado com sucesso.");
+                      document.querySelector(".contact-form").reset();
+                    })
+                    .catch((error) => {
+                      console.error("EmailJS error:", error);
+                      alert("Erro ao enviar email. Tente novamente.");
+                    });
+                }
+
+                // Attach the event listener
+                document
+                  .querySelector(".contact-form")
+                  .addEventListener("submit", sendMail);
+              </script>
             </div>
-        </section>
-
-        <!-- GALLERY SECTION -->
-        <section class="gallery-section" id="section_2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h2 class="mb-4">Conheça a nossa loja</h2>
-                        <p class="mb-5">Conheça melhor o nosso espaço e os nossos produtos através destas imagens.</p>
-                    </div>
-                </div>
-
-                <div class="carousel-with-thumbnails">
-                    <!-- Left thumbnail preview -->
-                    <div class="thumbnail-preview d-none d-md-block" id="prevThumbnail">
-                        <img src="images/loja/cobertores.jpg" alt="Previous slide" data-bs-target="#lojaCarousel"
-                            data-bs-slide="prev">
-                    </div>
-
-                    <!-- Main carousel -->
-                    <div class="main-carousel">
-                        <div id="lojaCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active text-center">
-                                    <img src="images/loja/exterior.jpg" class="carousel-img"
-                                        alt="Exterior da loja Cilar">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="images/loja/quiosque.jpg" class="carousel-img" alt="Quiosque da loja">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="images/loja/produtos_casa.jpg" class="carousel-img"
-                                        alt="Produtos para casa">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="images/loja/roupa.jpg" class="carousel-img" alt="Secção de roupa">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="images/loja/tecnologia.jpg" class="carousel-img"
-                                        alt="Produtos de tecnologia">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="images/loja/flores_falsas.jpg" class="carousel-img"
-                                        alt="Flores artificiais">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="images/loja/linhas.jpg" class="carousel-img" alt="Linhas e fios">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="images/loja/cobertores.jpg" class="carousel-img"
-                                        alt="Cobertores e têxteis">
-                                </div>
-                            </div>
-
-                            <button class="carousel-control-prev" type="button" data-bs-target="#lojaCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#lojaCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                                <span class="visually-hidden">Próximo</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Right thumbnail preview -->
-                    <div class="thumbnail-preview d-none d-md-block" id="nextThumbnail">
-                        <img src="images/loja/quiosque.jpg" alt="Next slide" data-bs-target="#lojaCarousel"
-                            data-bs-slide="next">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- CTT SERVICES SECTION -->
-        <section class="ctt-services-section" id="section_3">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2>Serviços CTT</h2>
-                </div>
-            </div>
-
-            <div class="container mt-3">
-                <div class="row d-flex align-items-stretch mb-4">
-                    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                        <div class="ctt-container">
-                            <h3 class="mb-4 text-center" style="color: #d32f2f;">
-                                Somos um Ponto CTT.
-                            </h3>
-                            <div class="carousel-inner">
-                                <img src="images/loja/ponto_ctt.jpg" class="d-block w-100" alt="Interior Ponto CTT">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12 d-flex">
-                        <div class="ctt-description-container">
-                            <h3 class="text-white mb-4">
-                                <i class="bi bi-info-circle-fill me-2"></i>
-                                O que é um Ponto CTT?
-                            </h3>
-
-                            <p class="text-white mb-4">
-                                Um <strong>Ponto CTT</strong> é um estabelecimento comercial parceiro dos CTT que
-                                oferece uma ampla gama de serviços postais e financeiros. Funciona como uma extensão da
-                                rede de correios, proporcionando maior proximidade e conveniência aos clientes.
-                            </p>
-
-                            <p class="text-white mb-4">
-                                Estes pontos estratégicos permitem aceder aos principais serviços dos CTT sem
-                                necessidade de se deslocar a um posto de correios tradicional, oferecendo
-                                <strong>horários mais flexíveis</strong> e <strong>localização mais
-                                    conveniente</strong>.
-                            </p>
-
-                            <div class="ctt-advantages-box">
-                                <h5 class="text-white mb-3">
-                                    <i class="bi bi-star-fill me-2"></i>
-                                    Principais Vantagens:
-                                </h5>
-                                <p class="text-white mb-2">• <strong>Horários alargados</strong> - Mais flexibilidade
-                                </p>
-                                <p class="text-white mb-2">• <strong>Proximidade residencial</strong> - Mais perto de si
-                                </p>
-                                <p class="text-white mb-2">• <strong>Atendimento personalizado</strong> - Serviço
-                                    dedicado</p>
-                                <p class="text-white mb-0">• <strong>Serviços completos</strong> - Tudo num só local</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="ctt-services-box">
-                            <h3 class="text-white mb-4 text-center">
-                                <i class="bi bi-list-check me-2"></i>
-                                Serviços Disponíveis no Ponto CTT
-                            </h3>
-
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <ul class="ctt-service-list">
-                                        <li>
-                                            <i class="bi bi-envelope-fill ctt-service-icon"></i>
-                                            <div class="ctt-service-content">
-                                                <strong class="text-white">Correio Nacional e Internacional</strong><br>
-                                                <small class="text-white">Envio de cartas, postais e documentos
-                                                    registados para todo o mundo</small>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="bi bi-box-seam ctt-service-icon"></i>
-                                            <div class="ctt-service-content">
-                                                <strong class="text-white">Encomendas CTT Expresso</strong><br>
-                                                <small class="text-white">Envio e receção de encomendas com rastreamento
-                                                    em tempo real</small>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="bi bi-credit-card ctt-service-icon"></i>
-                                            <div class="ctt-service-content">
-                                                <strong class="text-white">Vales Postais</strong><br>
-                                                <small class="text-white">Envio e levantamento de dinheiro de forma
-                                                    segura e rápida</small>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-6 col-12">
-                                    <ul class="ctt-service-list">
-                                        <li>
-                                            <i class="bi bi-file-text ctt-service-icon"></i>
-                                            <div class="ctt-service-content">
-                                                <strong class="text-white">Impressões e Fotocópias</strong><br>
-                                                <small class="text-white">Serviços completos de impressão, digitalização
-                                                    e fotocópia</small>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="bi bi-phone ctt-service-icon"></i>
-                                            <div class="ctt-service-content">
-                                                <strong class="text-white">Recarregamentos</strong><br>
-                                                <small class="text-white">Carregamentos de telemóvel e cartões pré-pagos
-                                                    de todas as operadoras</small>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="bi bi-receipt ctt-service-icon"></i>
-                                            <div class="ctt-service-content">
-                                                <strong class="text-white">Pagamentos de Serviços</strong><br>
-                                                <small class="text-white">Pagamento de faturas, multas e diversos
-                                                    serviços públicos</small>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- HISTORY SECTION -->
-        <section class="history-section" id="section_4">
-            <div class="container">
-                <div class="col-12 text-center mb-5">
-                    <h1>Conheça-nos!</h1>
-                </div> 
-                <div class="row">
-                    <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                        <img src="images/loja/hist.jpg" class="history-image img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <div class="history-text-box">
-                            <h2 class="mb-2">A nossa história</h2>
-                            <h5 class="mb-3">Cilar, artigos para o lar.</h5>
-                            <p class="mb-0">Há duas décadas, no tranquilo cenário dos Foros de Salvaterra, nasceu este
-                                estabelecimento que rapidamente se tornou parte da vida da comunidade. Ao longo dos
-                                anos, cresceu e adaptou-se, sempre com a mesma dedicação em servir os clientes. Aqui
-                                encontra-se de tudo um pouco desde produtos do dia a dia até pequenos tesouros que
-                                contam histórias. Mais do que uma simples loja, é um ponto de encontro, um lugar onde
-                                gerações se cruzam, memórias se criam e a tradição se mantém viva.</p>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="history-text-box mb-lg-0">
-                                    <h5 class="mb-3">Os Nossos Objetivos</h5>
-                                    <p>Comprometemo-nos a servir com qualidade, proximidade e respeito pela tradição dos
-                                        Foros de Salvaterra.</p>
-
-                                    <ul class="history-list mt-2">
-                                        <li class="history-list-item d-flex">
-                                            <i class="bi-check history-text-box-icon me-2"></i>
-                                            Continuar a servir a comunidade
-                                        </li>
-                                        <li class="history-list-item d-flex">
-                                            <i class="bi-check history-text-box-icon me-2"></i>
-                                            Oferecer produtos para as necessidades do dia a dia
-                                        </li>
-                                        <li class="history-list-item d-flex">
-                                            <i class="bi-check history-text-box-icon me-2"></i>
-                                            Manter o espírito acolhedor e familiar da loja
-                                        </li>
-                                        <li class="history-list-item d-flex">
-                                            <i class="bi-check history-text-box-icon me-2"></i>
-                                            Preservar e valorizar a tradição local
-                                        </li>
-                                        <li class="history-list-item d-flex">
-                                            <i class="bi-check history-text-box-icon me-2"></i>
-                                            Adaptar-se às mudanças sem perder a essência
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION (CILA CUNHA) -->
-        <section class="about-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-5 col-12">
-                        <img src="images/loja/cila_retrato.jpg"
-                            class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-5 col-md-7 col-12">
-                        <div class="about-text-block">
-                            <h2 class="mb-0">Cila Cunha</h2>
-                            <p class="text-muted mb-lg-4 mb-md-4">Dona da loja</p>
-                            <p>Há vinte anos, decidi abrir as portas da minha loja, a Cilar, aqui nos Foros de
-                                Salvaterra. Nunca imaginei, nesse dia, o quanto este espaço viria a fazer parte não só
-                                da minha vida, mas também da vida da comunidade. Desde cedo, percebi que não era apenas
-                                uma questão de vender produtos. Era criar um lugar de proximidade, onde cada cliente
-                                fosse recebido com um sorriso e levado a sentir-se em casa.</p>
-
-                            <ul class="social-icon mt-4">
-                                <li class="social-icon-item">
-                                    <a href="https://www.facebook.com/cilar.cunha?locale=pt_PT" target="_blank"
-                                        class="social-icon-link bi-facebook"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="https://www.instagram.com/cila.cunha" target="_blank"
-                                        class="social-icon-link bi-instagram"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- LOCATION SECTION (MAP) -->
-        <section class="location-section" id="section_5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center mb-5">
-                        <h2 class="mb-4">Venha visitar-nos!</h2>
-                        <p>Rua Imaculado Coração de Maria 137, 2120-188 Foros de Salvaterra</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-10 col-12 mx-auto">
-                        <div class="map-container">
-                            <div class="ratio ratio-16x9">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12403.391100533932!2d-8.757042016235065!3d38.99597042365279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18e3c6e6cc752d%3A0xbdbced41a6ad3220!2sCilar%20artigos%20para%20o%20lar!5e0!3m2!1spt-PT!2spt!4v1755355026837!5m2!1spt-PT!2spt"
-                                    style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade" title="Localização da Cilar">
-                                </iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section class="contact-section" id="section_6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
-                        <div class="contact-info-wrap">
-                            <h2 class="mb-5">Entre em contacto</h2>
-
-                            <div class="contact-info">
-                                <h5 class="mb-3">Contactos:</h5>
-
-                                <p class="d-flex mb-2">
-                                    <i class="bi-geo-alt me-2"></i>
-                                    <a target="_blank" href="https://maps.app.goo.gl/1EAnzohpn1eWh5AN9">
-                                        Rua Imaculado Coração de Maria 137, 2120-188 Foros de Salvaterra
-                                    </a>
-                                </p>
-
-                                <p class="d-flex mb-2">
-                                    <i class="bi-telephone me-2"></i>
-                                    <a href="tel: +351 919 017 931">
-                                        +351 919 017 931
-                                    </a>
-                                </p>
-
-                                <p class="d-flex">
-                                    <i class="bi-envelope me-2"></i>
-                                    <a href="mailto:lojacilar@hotmail.com">
-                                        lojacilar@hotmail.com
-                                    </a>
-                                </p>
-
-                                <p class="d-flex">
-                                    <i class="bi-instagram me-2"></i>
-                                    <a target="_blank" href="https://www.instagram.com/loja_cilar_/">
-                                        loja_cilar_
-                                    </a>
-                                </p>
-
-                                <a href="https://www.google.com/maps/dir//Cilar+artigos+para+o+lar+Rua+Imaculado+Cora%C3%A7%C3%A3o+de+Maria+137+2120-188+Foros+de+Salvaterra/@38.9959552,-8.738588,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd18e3c6e6cc752d:0xbdbced41a6ad3220!2m2!1d-8.738588!2d38.9959552?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
-                                    target="_blank" class="custom-btn btn mt-3">Obter direções</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12 mx-auto">
-                        <form class="custom-form contact-form" action="https://api.web3forms.com/submit" method="POST"
-                            role="form">
-                            <h3>Formulário de Contato</h3>
-
-                            <p class="mb-4">Ou apenas envie um email para:
-                                <strong><a href="#">lojacilar@hotmail.com</a></strong>
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="first-name" id="first-name" class="form-control"
-                                        placeholder="Primeiro Nome" required>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="last-name" id="last-name" class="form-control"
-                                        placeholder="Último Nome" required>
-                                </div>
-                            </div>
-
-                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                placeholder="O seu email" required>
-
-                            <textarea name="message" rows="5" class="form-control" id="message"
-                                placeholder="Como podemos ajudar?"></textarea>
-
-                            <button type="submit" class="form-control">Enviar Mensagem</button>
-
-                            <input type="hidden" name="access_key" value="0dbf13b6-9ec5-4e49-aed6-7377700d1532">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-12 mb-4">
-                    <img src="images/logo_cilar_completo_inverted.png" class="logo img-fluid w-100" alt="">
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-12 mb-4">
+            <img
+              src="images/logo_cilar_completo_inverted.png"
+              class="logo img-fluid w-100"
+            />
+          </div>
 
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <h5 class="text-white mb-3">Links Úteis</h5>
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h5 class="text-white mb-3">Links Úteis</h5>
 
-                    <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">Galeria</a></li>
-                        <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link">Somos um Ponto
-                                CTT</a></li>
-                        <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link">A nossa história</a>
-                        </li>
-                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">Venha
-                                visitar-nos!</a></li>
-                    </ul>
-                </div>
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <a href="#section_2" class="footer-menu-link">Galeria</a>
+              </li>
+              <li class="footer-menu-item">
+                <a href="#section_3" class="footer-menu-link"
+                  >Somos um Ponto CTT</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="#section_4" class="footer-menu-link"
+                  >A nossa história</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="#section_5" class="footer-menu-link"
+                  >Venha visitar-nos!</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                    <h5 class="text-white mb-3">Contactos</h5>
+          <div class="col-lg-4 col-md-6 col-12 mx-auto">
+            <h5 class="text-white mb-3">Contactos</h5>
 
-                    <p class="text-white d-flex mb-2">
-                        <i class="bi-telephone me-2"></i>
-                        <a href="tel: +351 919 017 931" class="site-footer-link">
-                            +351 919 017 931
-                        </a>
-                    </p>
+            <p class="text-white d-flex mb-2">
+              <i class="bi-telephone me-2"></i>
+              <a href="tel: +351 919 017 931" class="site-footer-link">
+                +351 919 017 931
+              </a>
+            </p>
 
-                    <p class="text-white d-flex">
-                        <i class="bi-envelope me-2"></i>
-                        <a href="mailto:lojacilar@hotmail.com" class="site-footer-link">
-                            lojacilar@hotmail.com
-                        </a>
-                    </p>
+            <p class="text-white d-flex">
+              <i class="bi-envelope me-2"></i>
+              <a href="mailto:lojacilar@hotmail.com" class="site-footer-link">
+                lojacilar@hotmail.com
+              </a>
+            </p>
 
-                    <p class="text-white d-flex mt-3">
-                        <i class="bi-geo-alt me-2"></i>
-                        Rua Imaculado Coração de Maria 137, 2120-188 Foros de Salvaterra
-                    </p>
+            <p class="text-white d-flex mt-3">
+              <i class="bi-geo-alt me-2"></i>
+              Rua Imaculado Coração de Maria 137, 2120-188 Foros de Salvaterra
+            </p>
 
-                    <div class="d-flex mt-3">
-                        <ul class="social-icon">
-                            <li class="social-icon-item">
-                                <a href="https://www.facebook.com/cilar.cunha?locale=pt_PT" target="_blank"
-                                    class="social-icon-link bi-facebook"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="https://www.instagram.com/cila.cunha" target="_blank"
-                                    class="social-icon-link bi-instagram"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="d-flex mt-3">
+              <ul class="social-icon">
+                <li class="social-icon-item">
+                  <a
+                    href="https://www.facebook.com/cilar.cunha?locale=pt_PT"
+                    target="_blank"
+                    class="social-icon-link bi-facebook"
+                  ></a>
+                </li>
+                <li class="social-icon-item">
+                  <a
+                    href="https://www.instagram.com/cila.cunha"
+                    target="_blank"
+                    class="social-icon-link bi-instagram"
+                  ></a>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- JAVASCRIPT FILES -->
@@ -615,23 +885,21 @@
     <script src="js/gallery-carousel.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carousel = document.querySelector("#lojaCarousel");
-            const inner = carousel.querySelector(".carousel-inner");
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector("#lojaCarousel");
+        const inner = carousel.querySelector(".carousel-inner");
 
-            function adjustHeight() {
-                const activeItem = inner.querySelector(".carousel-item.active img");
-                if (activeItem) {
-                    inner.style.height = activeItem.offsetHeight + "px";
-                }
-            }
+        function adjustHeight() {
+          const activeItem = inner.querySelector(".carousel-item.active img");
+          if (activeItem) {
+            inner.style.height = activeItem.offsetHeight + "px";
+          }
+        }
 
-            adjustHeight();
-            carousel.addEventListener("slid.bs.carousel", adjustHeight);
-            window.addEventListener("resize", adjustHeight);
-        });
+        adjustHeight();
+        carousel.addEventListener("slid.bs.carousel", adjustHeight);
+        window.addEventListener("resize", adjustHeight);
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
