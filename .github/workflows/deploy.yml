@@ -2,24 +2,28 @@ name: Deploy to OVH via SFTP
 
 on:
   push:
-    branches:
-      - main   # ou a branch que usas para produção
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v3
-
-      - name: Deploy para OVH
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ftp.cluster100.hosting.ovh.net
-          username: lojacip
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 22
-          local-dir: ./ # troca para dist/, build/, etc. se necessário
-          server-dir: /www/ # OVH quase sempre usa /www/ como raiz do site
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy to OVH via SFTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.cluster100.hosting.ovh.net
+        username: ${{ secrets.SFTP_USERNAME }}
+        password: ${{ secrets.SFTP_PASSWORD }}
+        port: 22
+        protocol: sftp
+        local-dir: ./
+        server-dir: /home/lojacip/www/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/README.md
+          **/.github/**
