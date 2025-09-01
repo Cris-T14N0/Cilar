@@ -19,7 +19,7 @@ jobs:
           server: ftp.cluster100.hosting.ovh.net
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
+          protocol: ftps
           port: 22
           local-dir: ./ # pasta local do repositório
           server-dir: /home/lojacip/ # pasta do alojamento OVH
