@@ -79,6 +79,9 @@
 body {
   background-color: var(--white-color);
   font-family: var(--body-font-family);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 h1,
